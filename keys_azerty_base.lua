@@ -77,6 +77,7 @@ function keys.init()
     { k = 52,  v = ":" },
     { k = 86,  v = "<" },
     { k =  7,  v = "-" },
+    { k =  2,  v = "&" },
 }
 
   keys.shift_codes = {
