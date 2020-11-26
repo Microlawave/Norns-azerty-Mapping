@@ -149,7 +149,7 @@ end
 
 function keys:is_symbol(code)
   local check = {
-    2, 4, 12, 13, 39, 51, 52, 53
+    2, 4, 12, 13, 39, 51, 52, 53, 86
   }
   return fn.table_contains(check, code)
 end
