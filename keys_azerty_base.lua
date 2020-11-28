@@ -5,6 +5,7 @@ function keys.init()
   keys.alt   = false
   keys.ctrl  = false
   keys.opt   = false
+  keys.mod   = false
   keys.shift = false
   keys.caps  = false
   keys.codes = {
@@ -78,7 +79,7 @@ function keys.init()
     { k = 86,  v = "<" },
     { k =  7,  v = "-" },
     { k =  2,  v = "&" },
-}
+  }
 
   keys.shift_codes = {
     -- { k = 10,  v = "(" },
@@ -128,7 +129,6 @@ function keys:get_shifted_keycode(code)
     end
   end
 end
-
 
 function keys:is_letter_code(code)
   -- a thru z
@@ -204,7 +204,7 @@ function keys:is_capsed()
 end
 
 function keys:is_ctrl(code)
-  return 29 == code
+  return (29 == code) or (97 == code)
 end
 
 function keys:handle_ctrl(val)
@@ -249,6 +249,10 @@ end
 
 function keys:is_alted()
   return self.alt
+end
+
+function keys:is_mod()
+  return self:is_ctrled() or self:is_opted() or self:is_alted()
 end
 
 function keys:is_shift(code)
