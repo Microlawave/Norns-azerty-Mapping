@@ -1,3 +1,3 @@
-# Norns-Yggdrasil-azerty
+# Norns-azerty
 Azerty keyboard input adapter 
-for Monome Norns script Yggdrasil by Tyler Etters
+for Monome Norns
